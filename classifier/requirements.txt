@@ -1,0 +1,12 @@
+tqdm
+numpy
+seaborn
+scikit-learn
+tensorboard
+matplotlib
+neptune-client
+efficientnet_pytorch
+opencv-python
+psutil
+albumentations
+timm

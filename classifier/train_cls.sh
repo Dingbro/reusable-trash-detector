@@ -1,0 +1,20 @@
+python train.py \
+    --seed 777 \
+    --exp_name timms_03 \
+    --num_classes 7 \
+    --image_size 384 \
+    --mode multi-timm \
+    --advprop \
+    --train_batch_size 200 \
+    --eval_batch_size 200 \
+    --root dataset/images \
+    --trainfile dataset/meta/final_soft_label_bbox.json \
+    --evalfile dataset/meta/sample_label_bbox.json \
+    --gpus 0,1,2,3 \
+    --pretrained \
+    --model_name timm-tf_efficientnetv2_l_in21k \
+    --lr 0.0001 \
+    --weight_decay 0.00001 \
+    --optim adamP \
+    --criterion multiBCE \
+    --val_same_epoch 0

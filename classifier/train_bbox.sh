@@ -1,0 +1,19 @@
+python train.py \
+    --seed 777 \
+    --exp_name bbox_1103_fpnefficientnetb5_456_l1_real_val_lr_1e-3_adam_03 \
+    --train_batch_size 32 \
+    --mode bbox \
+    --save_only_best \
+    --eval_batch_size 64 \
+    --root dataset/garbage_v2 \
+    --trainfile dataset/garbage_v2/meta/1103_bbox_meta.json \
+    --evalfile dataset/garbage_v2/meta/sample_label.json \
+    --image_size 456 \
+    --num_classes 4 \
+    --gpus 1 \
+    --pretrained \
+    --optim adam \
+    --num_epochs 300 \
+    --model_name fpnefficientnet-b5 \
+    --lr 0.001 \
+    --criterion l1
