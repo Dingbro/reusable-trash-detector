@@ -1,0 +1,14 @@
+python -m torch.distributed.launch --nproc_per_node 4 train.py \
+    --weights garbage/fulldataset_submit_5x64/weights/best.pt \
+    --name fulldataset_finetune \
+    --hyp data/hyps/hyp.finetune.yaml \
+    --data data/Garbage.yaml \
+    --batch-size 48 \
+    --imgsz 1280 \
+    --device 0,1,2,3 \
+    --epochs 10 \
+    --entity dingbro-corp \
+    --project garbage \
+    --workers 8 \
+    --bbox_interval 5 \
+    --sync-bn 

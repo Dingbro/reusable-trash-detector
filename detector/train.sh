@@ -1,0 +1,14 @@
+python -m torch.distributed.launch --nproc_per_node 4 train.py \
+    --weights yolov5x6.pt \
+    --name fulldataset_submit_5x6 \
+    --hyp data/hyps/hyp.scratch-high.yaml \
+    --data data/Garbage.yaml \
+    --batch-size 48 \
+    --imgsz 1280 \
+    --device 0,1,2,3 \
+    --epochs 100 \
+    --entity dingbro-corp \
+    --project garbage \
+    --workers 8 \
+    --bbox_interval 20 \
+    --sync-bn 
