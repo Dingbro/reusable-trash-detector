@@ -70,6 +70,7 @@ Object detection 문제에서 가장 많은 비용이 들어가는 것은 데이
   배경 합성을 통해 생성된 이미지 사진
 </p> 
 
+
 ### 합성 이미지 수/비율 증가에 따른 성능표
 
 | Base Dataset Num | Background Image Num | Manipulate Num |  mAP  | Class Object Number F1 |
